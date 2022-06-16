@@ -6,7 +6,19 @@ metadata:
   name: manager-role
 rules:
 - apiGroups:
-  - cache.ob18ad15.github.com
+  - apps
+  resources:
+  - deployments
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cache.ob18ad15.github.io
   resources:
   - memcacheds
   verbs:
@@ -18,16 +30,24 @@ rules:
   - update
   - watch
 - apiGroups:
-  - cache.ob18ad15.github.com
+  - cache.ob18ad15.github.io
   resources:
   - memcacheds/finalizers
   verbs:
   - update
 - apiGroups:
-  - cache.ob18ad15.github.com
+  - cache.ob18ad15.github.io
   resources:
   - memcacheds/status
   verbs:
   - get
   - patch
   - update
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - get
+  - list
+  - watch

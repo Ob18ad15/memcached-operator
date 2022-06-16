@@ -41,9 +41,9 @@ type MemcachedReconciler struct {
 	Scheme *runtime.Scheme
 }
 
-//+kubebuilder:rbac:groups=cache.Ob18ad15.github.io,resources=memcacheds,verbs=get;list;watch;create;update;patch;delete
-//+kubebuilder:rbac:groups=cache.Ob18ad15.github.io,resources=memcacheds/status,verbs=get;update;patch
-//+kubebuilder:rbac:groups=cache.Ob18ad15.github.io,resources=memcacheds/finalizers,verbs=update
+//+kubebuilder:rbac:groups=cache.ob18ad15.github.io,resources=memcacheds,verbs=get;list;watch;create;update;patch;delete
+//+kubebuilder:rbac:groups=cache.ob18ad15.github.io,resources=memcacheds/status,verbs=get;update;patch
+//+kubebuilder:rbac:groups=cache.ob18ad15.github.io,resources=memcacheds/finalizers,verbs=update
 //+kubebuilder:rbac:groups=apps,resources=deployments,verbs=get;list;watch;create;update;patch;delete
 //+kubebuilder:rbac:groups=core,resources=pods,verbs=get;list;watch
 
